@@ -1,0 +1,11 @@
+@media (condição) {
+    body(o que quiser mudae){
+        (o que quer fazer no body quando tiver no telefone)
+    }
+}
+ou 
+@media (orientation: portrait ou landscape (horizontal ou vertical)){
+    body(o que quiser mudae){
+        (o que quer fazer no body quando tiver no telefone)
+    }
+}

@@ -1,0 +1,354 @@
+* {
+    /* todos os elemntos da página */
+    margin: 0;
+    /* tira o espaço externo */
+    padding: 0;
+    /* tira o espaço interno */
+}
+
+header {
+    display: flex;
+    /* ativa o Flexbox para organizar os elementos (padão de organizar por linha) */
+    justify-content: center;
+    /* alinha no centro horizontal*/
+    align-items: center;
+    /*alinha no centro vertical*/
+    height: 70px;
+    /* altura */
+    background-color: blueviolet;
+}
+
+ul {
+    list-style: none;
+    /* tira bolinha, pq o <ul> coloca aautomatico */
+    display: flex;
+    /* itens lado a lado */
+    gap: 30px;
+    /* brecha entre eles*/
+
+}
+
+a {
+    text-decoration: none;
+    /* nenhuma decoracao */
+    color: ghostwhite;
+    font-size: 18px;
+    transition: 0.6s;
+
+}
+
+a:hover {
+    /* quando o mause estiver em cima */
+    color: darkmagenta;
+
+}
+
+#Home {
+    /* id*/
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    /* para o conjunto não ficar no centro */
+    align-items: flex-start;
+    /*  para o conjunto não ficar no centro  */
+    background-color: #171321;
+
+    padding-left: 15px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    /* evita problmas com a responsividade */
+    gap: 120px;
+}
+
+h1 span {
+    color: #9b6cff;
+    font-style: inherit;
+    /*elementos um embaixo do outro  */
+}
+
+h1 {
+    color: azure;
+    font-size: 50px;
+
+
+}
+
+p {
+    max-width: 600px;
+    font-size: 18px;
+    color: azure;
+    margin-top: 10px;
+
+
+}
+
+body {
+    font-family: 'Poppins';
+    /* familia da fonte, tem que ser entre aspas */
+}
+
+.conteudo {
+    background-color: rgb(37, 19, 37);
+    max-width: 700px;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-left: 17px;
+    padding-bottom: 19px;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 230px;
+}
+
+.conteudo p {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.conteudo h1 {
+    margin-left: 10px;
+}
+
+.imagemHome {
+    width: 900px;
+    height: 550px;
+    border: 5px solid rgb(39, 13, 39);
+    /* espessura da borda, tipo de linha e cor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 30px;
+    
+}
+
+.imagemHome img {
+    box-shadow: 3px 3px 50px 3px #9b6cff;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* para a imagem preencher toda a caixa mesmo que a caixa seja*/
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.imagemHome:hover {
+    transform: scale(1.05);
+    /* modifica a posicao da foto (aumenta 105% do tamanho original)*/
+}
+
+#projetos {
+    min-height: 80vh;
+    /* ter pelo menos 1 tela inteira de altura*/
+    padding: 100px;
+    visibility: hidden;
+}
+
+.h2p h2 {
+
+    text-align: center;
+
+}
+
+.h2p p {
+    text-align: center;
+    margin: 0 auto;
+    /* tem q por isso pq so o text align centraliza so o texto dentro da caixa do <p> e nao da tela*/
+    color: #9b6cff;
+}
+
+.card {
+    width: 150px;
+    min-height: 146px;
+    padding: 25px;
+    background-color: #211b30;
+    border-radius: 15px;
+    margin-top: 40px;
+
+    display: flex;
+    /* mostrar que vai usar FLEXBOX(elementos em linha reta) para organizar o card.*/
+    flex-direction: column;
+    /* ai pra ficar em coluna coloca isso (um de baixo do outro)*/
+     
+
+}
+
+.card a {
+    margin-top: auto;
+}
+
+.card:hover {
+    transform: scale(1.06);
+}
+
+.card h3 {
+    color: #9b6cff;
+    margin-bottom: 10px;
+    /* espaco abaixo do titulo*/
+
+}
+
+.card p {
+    margin-bottom: 60px;
+}
+
+.cards {
+    gap: 25px;
+    flex-wrap: wrap;
+    /* vai quebrar a linha quando encher*/
+    display: flex;
+    justify-content: center;
+    /*conjunto ficar no centro depois de alinhado */
+
+}
+
+
+#sobre {
+    min-height: 95vh;
+    padding: 10px 6%;
+    /*espaço do conteudo com as bordas(100px cima e baixo // 10% direito e esquerda)*/
+    color: #9b6cff;
+    display: flex;
+    justify-content: center;
+     visibility: hidden;
+}
+
+#sobre p {
+    color: #9b6cff;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+
+.sobre-conteudo img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 40px;
+    border: 5px solid #9b6cff;
+    box-shadow: 3px 3px 50px 3px #9b6cff;
+}
+
+.sobre-texto h2 {
+    color: #171321;
+}
+
+.sobre-texto {
+    max-width: 600px;
+}
+
+#contato p {
+    color: #9b6cff;
+}
+
+.contato-conteudo {
+    max-width: 600px;
+    margin: 0 auto;
+    /* tem q por isso pq so o text align centraliza so o texto dentro da caixa do <p> e nao da tela*/
+    /* para ficar centralizado garantindo que nao ganhe espaços estranhos quando a tela diminuir*/
+    min-height: 45vh;
+    text-align: center;
+    visibility: hidden;
+
+}
+
+.contato-conteudo a {
+    display: inline-block;
+    /* faz o <a> que é inline (link que abre algo) se comporte como caixa*/
+    padding: 5px;
+    width: 500px;
+    background-color: #9b6cff;
+    color: white;
+    border-radius: 10px;
+    transition: 0.30s;
+    margin-top: 5px;
+}
+
+.contato-conteudo a:hover {
+    background-color: purple;
+}
+
+#contato {
+    padding: 100px 10%;
+}
+
+@media (max-width: 760px) {
+
+    /*@media (quando tiver no celular faça isso:*/
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .contato-conteudo a {
+        padding: 10px 60px;
+    }
+}
+
+@media(max-width: 760px) {
+    #Home {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 50px;
+    }
+}
+
+@media(max-width: 760px) {
+    .imagemHome {
+        width: 264px;
+        margin-bottom: 13px;
+    }
+}
+
+@media(max-width: 760px) {
+    .conteudo {
+        padding-left: 8px;
+        margin-left: -1px;
+    }
+}
+
+@media(max-width: 760px) {
+    .imgSobre {
+        margin-top: -30px;
+
+    }
+}
+
+#tecnologias {
+    padding: 200px 6%;
+    text-align: center;
+    min-height: 50vh;
+    visibility: hidden;
+    margin-top: -350px;
+    margin-left: -375px;
+    
+}
+
+.tecnologias-conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 730px;
+    
+    
+
+}
+
+.tecnologia {
+    background-color: #9b6cff;
+    box-shadow: 8px 8px 5px 2px rgb(37, 19, 37);;
+    color: white;
+    transition: 0.30s;
+    width: 750px;
+    height: 100px;
+}
+
+.tecnologia:hover {
+    background-color: purple;
+
+}
