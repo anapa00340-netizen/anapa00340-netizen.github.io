@@ -298,10 +298,11 @@ body {
 }
 
 #tecnologias {
-    padding: 200px 6%;
+    padding: 100px 6%;
     text-align: center;
     min-height: 50vh;
-    
+    margin-top: 0;
+    margin-left: 0;
 }
 
 .tecnologias-conteudo {
