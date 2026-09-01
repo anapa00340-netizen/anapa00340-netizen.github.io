@@ -187,9 +187,8 @@ body {
 }
 
 #sobre {
-    min-height: 95vh;
-    padding: 10px 6%;
-    /* espaço do conteúdo com as bordas */
+    min-height: auto;
+    padding: 100px 6%;
     color: #9b6cff;
     display: flex;
     justify-content: center;
