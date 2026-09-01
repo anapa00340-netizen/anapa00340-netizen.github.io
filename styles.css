@@ -187,8 +187,9 @@ body {
 }
 
 #sobre {
-    min-height: auto;
-    padding: 100px 6%;
+    min-height: 95vh;
+    padding: 10px 6%;
+    /* espaço do conteúdo com as bordas */
     color: #9b6cff;
     display: flex;
     justify-content: center;
@@ -297,11 +298,11 @@ body {
 }
 
 #tecnologias {
-    padding: 100px 6%;
+    padding: 200px 6%;
     text-align: center;
     min-height: 50vh;
-    margin-top: 0;
-    margin-left: 0;
+    margin-top: -350px;
+    margin-left: -375px;
 }
 
 .tecnologias-conteudo {
@@ -314,12 +315,11 @@ body {
 }
 
 .tecnologia {
+    padding: 15px 25px;  /* deixa o tamanho se ajustar ao texto */
     background-color: #9b6cff;
     box-shadow: 8px 8px 5px 2px rgb(37, 19, 37);
     color: white;
     transition: 0.30s;
-    width: 750px;
-    height: 100px;
 }
 
 .tecnologia:hover {
