@@ -1,158 +1,201 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfólio de Ana Paula Ferreira, estudante de Ciência da Computação. Conheça seus projetos de desenvolvimento web e Java."
+    />
+    <meta name="theme-color" content="#191224" />
+    <title>Ana Paula Ferreira | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head> <!-- cabeça -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- chama o arquivoo CSS -->
-    <!-- fontes externas pra fonte -->
-    <link rel="biblioteca" href="script.js">
-</head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-<body> <!-- corpo -->
-
-
-    <header> <!-- cabeçalho -->
-        <ul> <!-- uma lista-->
-            <li> <!-- item da lista -->
-                <a href="#home">Home</a><!-- link -->
-            </li>
-            <li> <!-- item da lista -->
-                <a href="#projetos">Projetos</a><!-- link -->
-            </li>
-            <li> <!-- item da lista -->
-                <a href="#sobre">Sobre</a> <!-- link -->
-            </li>
-            <li> <!-- item da lista -->
-                <a href="#contato">Contato</a> <!-- link -->
-            </li>
-        </ul>
+    <header class="cabecalho">
+      <div class="container cabecalho-conteudo">
+        <a class="marca" href="#home" aria-label="Ana Paula Ferreira, início">AP</a>
+        <nav aria-label="Navegação principal">
+          <ul class="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section id="Home"> <!-- procura o elemto na pagina que tem Home-->
-
-        <div class="conteudo"> <!-- BLOCOS, agrupar elementos do mesmo grupo-->
-
-            <h1>
-                Olá, eu sou <span>Ana Paula Ferreira</span>.
-                <!--span serve pra estilizar de forma diferente pra facilitar no CSS  -->
-            </h1>
-
-            <p>
-                Desenvolvedora criativa focada em construir experiências digitais e interfaces intuitivas.
+    <main id="conteudo" tabindex="-1">
+      <section id="home" class="inicio" aria-labelledby="titulo-inicio">
+        <div class="container inicio-conteudo">
+          <div class="inicio-texto">
+            <p class="formacao">Estudante de Ciência da Computação</p>
+            <h1 id="titulo-inicio">Ana Paula <span>Ferreira</span></h1>
+            <p class="introducao">
+              Gosto de transformar o que aprendo em aplicações web e projetos de software.
+              Busco uma oportunidade de estágio em tecnologia.
             </p>
-
-        </div>
-        <div class="imagemHome">
-            <img src="download.jpg" alt="Foto">
-        </div>
-    </section>
-    <section id="projetos">
-        <div class="h2p">
-            <h2> Meus Projetos </h2>
-            <p>Aqui estão alguns dos projetos que desenvolvi.</p>
-
-        </div>
-
-        <div class="cards">
-            <div class="card">
-                <h3>Projeto 1</h3>
-                <p>Site Frutas</p>
-
-                <a href="https://anapa00340-netizen.github.io/sitefrutas/index.html" target="_blank">Ver projeto</a>
-                <!-- o taget faz abrir outra pagina-->
+            <div class="acoes-iniciais">
+              <a class="botao botao-principal" href="#projetos">Ver projetos</a>
+              <a class="botao botao-contato" href="#contato">Entrar em contato</a>
             </div>
-            <div class="card">
-                <h3>Projeto 2</h3>
-                <p>CRUD</p>
+          </div>
 
-                <a href="#">Ver projeto</a>
-            </div>
-            <div class="card">
-                <h3>Projeto 3</h3>
-                <p>Calculadora (React)</p>
-
-                <a href="#">Ver projeto</a>
-            </div>
-            <div class="card">
-                <h3>Projeto 14</h3>
-                <p>Estoque de Vendas</p>
-
-                <a href="#">Ver projeto</a>
-            </div>
+          <div class="retrato">
+            <img
+              src="FullSizeRender_VSCO.JPG.jpeg"
+              alt="Retrato de Ana Paula Ferreira"
+              width="828"
+              height="1403"
+              fetchpriority="high"
+            />
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="sobre">
-        <div class="sobre-conteudo">
+      <section id="projetos" class="secao projetos" aria-labelledby="titulo-projetos">
+        <div class="container">
+          <h2 id="titulo-projetos">Projetos</h2>
 
-            <div class="sobre-texto">
-                <h2>Sobre mim</h2>
+          <div class="grade-projetos">
+            <article class="projeto">
+              <div class="capa capa-bonvoy">
+                <img
+                  src="assets/bonvoy.png"
+                  alt="Tela de cadastro de pacotes do BonVoy"
+                  width="1100"
+                  height="700"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projeto-conteudo">
+                <h3>BonVoy</h3>
                 <p>
-                    Sou estudante de Ciência da Computação, atualmente no 4º período, e venho construindo minha
-                    trajetória na área de Tecnologia da Informação por meio da graduação e de projetos acadêmicos. Tenho
-                    interesse principalmente em desenvolvimento de software e desenvolvimento web, áreas nas quais busco
-                    aplicar na prática os conhecimentos que venho adquirindo.
-                    <br>
-                    Sou uma pessoa criativa, curiosa e gosto de aprender coisas novas. Acredito que a prática é uma
-                    parte importante do aprendizado e, por isso, procuro transformar o que estudo em projetos e desafios
-                    que me permitam desenvolver minhas habilidades.
-                    <br>
-                    Atualmente, também estudo inglês e continuo buscando ampliar meus conhecimentos na área de
-                    tecnologia. Meu objetivo é conquistar uma oportunidade de estágio para colocar meus conhecimentos em
-                    prática, adquirir experiência profissional e continuar evoluindo como desenvolvedora.
-
+                  Projeto acadêmico em equipe para gerenciar pacotes de viagem. Implementei os
+                  formulários de cadastro e edição, com validação e integração ao JSON Server.
                 </p>
+                <ul class="tecnologias" aria-label="Tecnologias do BonVoy">
+                  <li>Angular</li>
+                  <li>TypeScript</li>
+                  <li>JSON Server</li>
+                </ul>
+                <a class="link-projeto" href="https://github.com/juliacarolinec/bonvoy/pull/1">
+                  Ver minha contribuição
+                </a>
+              </div>
+            </article>
 
-            </div>
-            <div class="imgSobre">
-                <img src="FullSizeRender_VSCO.JPG.jpeg" alt="Minha Imagem">
-            </div>
+            <article class="projeto">
+              <div class="capa capa-frutas">
+                <img
+                  src="assets/site-frutas.png"
+                  alt="Página inicial do site Sacolão Rodrigues"
+                  width="1100"
+                  height="700"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projeto-conteudo">
+                <h3>Site Frutas</h3>
+                <p>
+                  Site do Sacolão Rodrigues com informações sobre frutas, legumes e verduras.
+                </p>
+                <ul class="tecnologias" aria-label="Tecnologias do Site Frutas">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <a class="link-projeto" href="https://anapa00340-netizen.github.io/sitefrutas/">
+                  Abrir Site Frutas
+                </a>
+              </div>
+            </article>
+
+            <article class="projeto">
+              <div class="capa capa-java" aria-hidden="true">
+                <div class="capa-java-conteudo">
+                  <span class="capa-java-titulo">Java</span>
+                  <span>Nome</span>
+                  <span>CPF</span>
+                  <span>E-mail</span>
+                </div>
+              </div>
+              <div class="projeto-conteudo">
+                <h3>Validação de dados</h3>
+                <p>
+                  Programa em Java que valida nome, CPF e e-mail e gera um relatório com os
+                  cadastros.
+                </p>
+                <ul class="tecnologias" aria-label="Tecnologias do projeto Validação de dados">
+                  <li>Java</li>
+                </ul>
+                <a class="link-projeto" href="https://github.com/anapa00340-netizen/validacao-java">
+                  Ver código no GitHub
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
-    <section id="tecnologias">
+      </section>
 
-
-        <div class="tecnologias-conteudo">
-            <div class="tecnologia">HTML</div>
-            <div class="tecnologia">CSS</div>
-            <div class="tecnologia">JavaScript</div>
-            <div class="tecnologia">Java</div>
-            <div class="tecnologia">C</div>
-            <div class="tecnologia">SQL</div>
-        </div>
-    </section>
-    <section id="contato">
-        <div class="contato-conteudo">
-            <h2>Entre em contato!</h2>
-
+      <section id="sobre" class="secao sobre" aria-labelledby="titulo-sobre">
+        <div class="container sobre-conteudo">
+          <div>
+            <h2 id="titulo-sobre">Sobre mim</h2>
             <p>
-                Gostou dos meus projetos? Entre em contato comigo!
+              Sou estudante de Ciência da Computação e tenho interesse em desenvolvimento web e de
+              software. Uso projetos acadêmicos para praticar o que aprendo na graduação, da
+              construção de interfaces à validação de dados.
             </p>
-
-            <a class="email" href="mailto:anapa00340@gmail.com">
-                <!-- malito abre o email direto-->
-                Enviar e-mail
-            </a>
-            <a class="github" href="https://github.com/anapa00340-netizen" target="_blank">
-                <!--target faz abrir outra aba, pra n sair do meu pórtifolio-->
-                GitHub
-            </a>
-            <a class="linkedin" href="https://linkedin.com/in/ana-paula-ferreira-47b594375" target="_blank">
-                <!--target faz abrir outra aba, pra n sair do meu pórtifolio-->
-                Linkedin
-            </a>
-
+            <p>Além da graduação, também estudo inglês.</p>
+          </div>
+          <div class="sobre-tecnologias">
+            <h3>Tecnologias</h3>
+            <ul class="tecnologias">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>Java</li>
+              <li>C</li>
+              <li>SQL</li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-    </section>
-    <section id=""></section>
-    <script src="script.js"></script>
-</body>
-
+      <section id="contato" class="secao contato" aria-labelledby="titulo-contato">
+        <div class="container contato-conteudo">
+          <h2 id="titulo-contato">Contato</h2>
+          <ul class="contato-links">
+            <li>
+              <a class="botao botao-principal" href="mailto:anapa00340@gmail.com">Enviar e-mail</a>
+            </li>
+            <li>
+              <a class="botao botao-contato" href="https://github.com/anapa00340-netizen">GitHub</a>
+            </li>
+            <li>
+              <a
+                class="botao botao-contato"
+                href="https://www.linkedin.com/in/ana-paula-ferreira-47b594375"
+              >LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,327 +1,486 @@
+:root {
+  color-scheme: light;
+  --fundo: #faf8fd;
+  --superficie: #fff;
+  --texto: #21172d;
+  --texto-suave: #625769;
+  --escuro: #191224;
+  --lilas: #d6b9ff;
+  --roxo: #634094;
+  --roxo-escuro: #492872;
+  --borda: #e7dfee;
+  --largura: 72rem;
+  --margem: clamp(1.25rem, 5vw, 4rem);
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
 * {
-    /* todos os elementos da página */
-    margin: 0;
-    /* tira o espaço externo */
-    padding: 0;
-    /* tira o espaço interno */
+  box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    /* ativa o Flexbox para organizar os elementos (padrão de organizar por linha) */
-    justify-content: center;
-    /* alinha no centro horizontal */
-    align-items: center;
-    /* alinha no centro vertical */
-    height: 70px;
-    /* altura */
-    background-color: blueviolet;
-}
-
-ul {
-    list-style: none;
-    /* tira bolinha, pq o <ul> coloca automático */
-    display: flex;
-    /* itens lado a lado */
-    gap: 30px;
-    /* brecha entre eles */
-}
-
-a {
-    text-decoration: none;
-    /* nenhuma decoração */
-    color: ghostwhite;
-    font-size: 18px;
-    transition: 0.6s;
-}
-
-a:hover {
-    /* quando o mouse estiver em cima */
-    color: darkmagenta;
-}
-
-#Home {
-    /* id */
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    /* para o conjunto não ficar no centro */
-    align-items: flex-start;
-    /* para o conjunto não ficar no centro */
-    background-color: #171321;
-
-    padding-left: 15px;
-    padding-top: 25px;
-    box-sizing: border-box;
-    /* evita problemas com a responsividade */
-    gap: 120px;
-}
-
-h1 span {
-    color: #9b6cff;
-    font-style: inherit;
-    /* elementos um embaixo do outro */
-}
-
-h1 {
-    color: azure;
-    font-size: 50px;
-}
-
-p {
-    max-width: 600px;
-    font-size: 18px;
-    color: azure;
-    margin-top: 10px;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins';
-    /* família da fonte, tem que ser entre aspas */
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
 }
 
-.conteudo {
-    background-color: rgb(37, 19, 37);
-    max-width: 700px;
-    border-radius: 50px;
-    padding-top: 10px;
-    padding-left: 17px;
-    padding-bottom: 19px;
-    margin-left: 10px;
-    margin-top: 10px;
-    height: 230px;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-.conteudo p {
-    margin-top: 5px;
-    margin-left: 10px;
+h2 {
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
 }
 
-.conteudo h1 {
-    margin-left: 10px;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.imagemHome {
-    width: 900px;
-    height: 550px;
-    border: 5px solid rgb(39, 13, 39);
-    /* espessura da borda, tipo de linha e cor */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    border-radius: 30px;
+a {
+  color: inherit;
 }
 
-.imagemHome img {
-    box-shadow: 3px 3px 50px 3px #9b6cff;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* para a imagem preencher toda a caixa mesmo que a caixa seja */
-    border-radius: 30px;
-    transition: 0.5s;
+:focus-visible {
+  outline: 3px solid var(--roxo);
+  outline-offset: 4px;
 }
 
-.imagemHome:hover {
-    transform: scale(1.05);
-    /* modifica a posição da foto (aumenta 105% do tamanho original) */
+.container {
+  width: min(var(--largura), calc(100% - var(--margem) * 2));
+  margin-inline: auto;
 }
 
-#projetos {
-    min-height: 80vh;
-    /* ter pelo menos 1 tela inteira de altura */
-    padding: 100px;
+.pular-conteudo {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  left: var(--margem);
+  padding: 0.5rem 1rem;
+  border-radius: 0.35rem;
+  background: var(--superficie);
+  color: var(--texto);
+  transform: translateY(-180%);
 }
 
-.h2p h2 {
-    text-align: center;
+.pular-conteudo:focus {
+  transform: translateY(0);
 }
 
-.h2p p {
-    text-align: center;
-    margin: 0 auto;
-    /* tem q por isso pq só o text align centraliza só o texto dentro da caixa do <p> e não da tela */
-    color: #9b6cff;
+.cabecalho,
+.inicio,
+.contato {
+  background: var(--escuro);
+  color: #fbf6ff;
 }
 
-.card {
-    width: 150px;
-    min-height: 146px;
-    padding: 25px;
-    background-color: #211b30;
-    border-radius: 15px;
-    margin-top: 40px;
-
-    display: flex;
-    /* mostrar que vai usar FLEXBOX (elementos em linha reta) para organizar o card. */
-    flex-direction: column;
-    /* aí pra ficar em coluna coloca isso (um de baixo do outro) */
+.cabecalho :focus-visible,
+.inicio :focus-visible,
+.contato :focus-visible {
+  outline-color: var(--lilas);
 }
 
-.card a {
-    margin-top: auto;
+.cabecalho {
+  border-bottom: 1px solid #3c2e4a;
 }
 
-.card:hover {
-    transform: scale(1.06);
+.cabecalho-conteudo {
+  display: flex;
+  min-height: 4.6rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.card h3 {
-    color: #9b6cff;
-    margin-bottom: 10px;
-    /* espaço abaixo do título */
+.marca {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #8f70ad;
+  border-radius: 0.65rem;
+  color: var(--lilas);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.card p {
-    margin-bottom: 60px;
+.menu,
+.tecnologias,
+.contato-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.cards {
-    gap: 25px;
-    flex-wrap: wrap;
-    /* vai quebrar a linha quando encher */
-    display: flex;
-    justify-content: center;
-    /* conjunto ficar no centro depois de alinhado */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem clamp(0.9rem, 3vw, 2.15rem);
 }
 
-#sobre {
-    min-height: 95vh;
-    padding: 10px 6%;
-    /* espaço do conteúdo com as bordas */
-    color: #9b6cff;
-    display: flex;
-    justify-content: center;
+.menu a {
+  display: block;
+  padding-block: 0.45rem;
+  color: #ebe0f5;
+  font-size: 0.93rem;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-#sobre p {
-    color: #9b6cff;
+.menu a:hover,
+.menu a:focus-visible {
+  color: var(--lilas);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.inicio {
+  background:
+    radial-gradient(ellipse at 79% 46%, #3b2552 0, transparent 58%),
+    var(--escuro);
+}
+
+.inicio-conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
+  min-height: 34rem;
+  align-items: center;
+  gap: clamp(2.6rem, 7vw, 6rem);
+  padding-block: clamp(3.2rem, 7vw, 6rem);
+}
+
+.formacao {
+  margin-bottom: 0.85rem;
+  color: #e8d8fa;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 500;
+}
+
+h1 {
+  color: #fff9ff;
+  font-size: clamp(3.2rem, 7.2vw, 6rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+h1 span {
+  display: block;
+  color: var(--lilas);
+}
+
+.introducao {
+  max-width: 33rem;
+  margin-top: clamp(1.25rem, 3vw, 1.75rem);
+  color: #ede3f5;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.acoes-iniciais,
+.contato-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.acoes-iniciais {
+  margin-top: 1.75rem;
+}
+
+.botao {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.botao-principal {
+  background: var(--lilas);
+  color: #241433;
+}
+
+.botao-principal:hover {
+  background: #ead8ff;
+}
+
+.botao-contato {
+  border-color: #846a9c;
+  color: #f4eafa;
+}
+
+.botao-contato:hover {
+  border-color: var(--lilas);
+  background: #352444;
+}
+
+.retrato {
+  position: relative;
+  isolation: isolate;
+  width: min(100% - 1rem, 20.5rem);
+  justify-self: center;
+}
+
+.retrato::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0.8rem -0.8rem -0.8rem 0.8rem;
+  border: 1px solid #ba98e1;
+  border-radius: 1.25rem;
+  content: '';
+}
+
+.retrato img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border: 1px solid #ad90ca;
+  border-radius: 1.25rem;
+  background: #432851;
+  object-fit: cover;
+  object-position: 50% 32%;
+}
+
+.secao {
+  padding-block: clamp(3.25rem, 7vw, 5.75rem);
+}
+
+.grade-projetos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.6vw, 1.75rem);
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  border-radius: 1rem;
+  background: var(--superficie);
+}
+
+.capa {
+  display: grid;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  place-items: center;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.capa img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 1px solid rgb(36 32 47 / 14%);
+  border-radius: 0.45rem;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.capa-bonvoy {
+  background: #dce8fb;
+}
+
+.capa-frutas {
+  background: #e3efdf;
+}
+
+.capa-java {
+  background: #e9dff6;
+}
+
+.capa-java-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.85rem;
+  border-left: 2px solid #916ab9;
+  color: var(--roxo-escuro);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.79rem;
+}
+
+.capa-java-titulo {
+  flex-basis: 100%;
+  font-family: Poppins, system-ui, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.65rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.projeto-conteudo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.1rem, 2.2vw, 1.5rem);
+}
+
+.projeto h3,
+.sobre-tecnologias h3 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(1.2rem, 2.1vw, 1.45rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.projeto p,
+.sobre p {
+  color: var(--texto-suave);
+}
+
+.projeto p {
+  font-size: 0.94rem;
+}
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+.projeto .tecnologias {
+  margin-block: 1.1rem 1.25rem;
+}
+
+.tecnologias li {
+  padding: 0.23rem 0.58rem;
+  border: 1px solid var(--borda);
+  border-radius: 0.4rem;
+  background: #f6f1fa;
+  color: var(--roxo-escuro);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.link-projeto {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--roxo);
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-underline-offset: 0.24em;
+}
+
+.link-projeto:hover {
+  color: var(--roxo-escuro);
+}
+
+.sobre {
+  border-top: 1px solid var(--borda);
+  background: #f2ecf7;
 }
 
 .sobre-conteudo {
-    display: flex;
-    align-items: center;
-    gap: 200px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  align-items: start;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
 }
 
-.sobre-conteudo img {
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
-    border-radius: 40px;
-    border: 5px solid #9b6cff;
-    box-shadow: 3px 3px 50px 3px #9b6cff;
+.sobre h2 {
+  margin-bottom: 1.15rem;
 }
 
-.sobre-texto h2 {
-    color: #171321;
+.sobre p + p {
+  margin-top: 0.85rem;
 }
 
-.sobre-texto {
-    max-width: 600px;
+.sobre-tecnologias {
+  padding: clamp(1.15rem, 3vw, 1.75rem);
+  border: 1px solid var(--borda);
+  border-radius: 1rem;
+  background: var(--superficie);
 }
 
-#contato p {
-    color: #9b6cff;
+.sobre-tecnologias .tecnologias {
+  margin-top: 1rem;
 }
 
 .contato-conteudo {
-    max-width: 600px;
-    margin: 0 auto;
-    /* tem q por isso pq só o text align centraliza só o texto dentro da caixa do <p> e não da tela */
-    /* para ficar centralizado garantindo que não ganhe espaços estranhos quando a tela diminuir */
-    min-height: 45vh;
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.35rem 2rem;
 }
 
-.contato-conteudo a {
-    display: inline-block;
-    /* faz o <a> que é inline (link que abre algo) se comporte como caixa */
-    padding: 5px;
-    width: 500px;
-    background-color: #9b6cff;
-    color: white;
-    border-radius: 10px;
-    transition: 0.30s;
-    margin-top: 5px;
+.contato h2 {
+  margin: 0;
 }
 
-.contato-conteudo a:hover {
-    background-color: purple;
+@media (max-width: 56rem) {
+  .inicio-conteudo {
+    gap: 2rem;
+  }
+
+  .grade-projetos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-#contato {
-    padding: 100px 10%;
+@media (max-width: 44rem) {
+  .inicio-conteudo,
+  .sobre-conteudo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .inicio-conteudo {
+    min-height: auto;
+  }
+
+  .retrato {
+    width: min(90%, 17rem);
+    justify-self: start;
+    margin-bottom: 0.7rem;
+  }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 35rem) {
+  .cabecalho-conteudo {
+    gap: 0.6rem;
+  }
 
-    /* @media (quando tiver no celular faça isso: */
-    .sobre-conteudo {
-        flex-direction: column;
-    }
+  .menu {
+    gap: 0.1rem clamp(0.55rem, 2.2vw, 0.9rem);
+  }
+
+  .menu a {
+    font-size: 0.82rem;
+  }
+
+  .grade-projetos {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
-@media (max-width: 760px) {
-    .contato-conteudo a {
-        padding: 10px 60px;
-    }
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-@media (max-width: 760px) {
-    #Home {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 50px;
-    }
-}
-
-@media (max-width: 760px) {
-    .imagemHome {
-        width: 264px;
-        margin-bottom: 13px;
-    }
-}
-
-@media (max-width: 760px) {
-    .conteudo {
-        padding-left: 8px;
-        margin-left: -1px;
-    }
-}
-
-@media (max-width: 760px) {
-    .imgSobre {
-        margin-top: -30px;
-    }
-}
-
-#tecnologias {
-    padding: 200px 6%;
-    text-align: center;
-    min-height: 50vh;
-    margin-top: -350px;
-    margin-left: -375px;
-}
-
-.tecnologias-conteudo {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 0 auto;
-    margin-top: 10px;
-    max-width: 730px;
-}
-
-.tecnologia {
-    padding: 15px 25px;  /* deixa o tamanho se ajustar ao texto */
-    background-color: #9b6cff;
-    box-shadow: 8px 8px 5px 2px rgb(37, 19, 37);
-    color: white;
-    transition: 0.30s;
-}
-
-.tecnologia:hover {
-    background-color: purple;
+  .botao {
+    transition: none;
+  }
 }
