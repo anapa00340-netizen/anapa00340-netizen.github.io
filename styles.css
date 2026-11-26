@@ -244,13 +244,17 @@ h1 span {
 }
 
 .grade-projetos {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1rem, 2.6vw, 1.75rem);
+  --espaco-cards: clamp(1rem, 2.6vw, 1.75rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espaco-cards);
 }
 
 .projeto {
   display: flex;
+  flex: 0 1 calc((100% - var(--espaco-cards) - var(--espaco-cards)) / 3);
+  min-width: 0;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--borda);
@@ -284,33 +288,16 @@ h1 span {
   background: #eee5f8;
 }
 
+.capa-jogo {
+  background: #ddcdeb;
+}
+
 .capa-frutas {
   background: #e3efdf;
 }
 
 .capa-java {
   background: #e9dff6;
-}
-
-.capa-java-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.75rem;
-  align-items: center;
-  padding: 0.6rem 0.85rem;
-  border-left: 2px solid #916ab9;
-  color: var(--roxo-escuro);
-  font-family: ui-monospace, Consolas, monospace;
-  font-size: 0.79rem;
-}
-
-.capa-java-titulo {
-  flex-basis: 100%;
-  font-family: Poppins, system-ui, sans-serif;
-  font-size: clamp(1.75rem, 4vw, 2.65rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.045em;
 }
 
 .projeto-conteudo {
@@ -414,8 +401,8 @@ h1 span {
 }
 
 @media (max-width: 66rem) {
-  .grade-projetos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .projeto {
+    flex-basis: calc((100% - var(--espaco-cards)) / 2);
   }
 }
 
@@ -450,8 +437,8 @@ h1 span {
     font-size: 0.82rem;
   }
 
-  .grade-projetos {
-    grid-template-columns: minmax(0, 1fr);
+  .projeto {
+    flex-basis: 100%;
   }
 }
 

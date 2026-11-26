@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Batalha por turnos, versão web de um projeto em Java." />
+    <meta name="theme-color" content="#181221" />
+    <title>Batalha por turnos | Ana Paula Ferreira</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="jogo.js"></script>
+  </head>
+  <body>
+    <main class="pagina">
+      <nav class="links" aria-label="Links do projeto">
+        <a href="../#projetos">Portfólio</a>
+        <a href="https://github.com/anapa00340-netizen/anapa00340-netizen.github.io/tree/main/jogo/codigo-java">
+          Código Java
+        </a>
+      </nav>
+
+      <h1>Batalha por turnos</h1>
+      <p class="introducao">Você joga como o herói. O inimigo contra-ataca se ainda estiver vivo.</p>
+
+      <form id="preparacao" class="painel">
+        <div class="duas-colunas">
+          <div class="campo">
+            <label for="vida-inicial-heroi">Vida inicial do herói</label>
+            <input type="number" id="vida-inicial-heroi" min="1" step="1" value="100" required />
+          </div>
+          <div class="campo">
+            <label for="vida-inicial-inimigo">Vida inicial do inimigo</label>
+            <input type="number" id="vida-inicial-inimigo" min="1" step="1" value="100" required />
+          </div>
+        </div>
+        <button type="submit" class="botao botao-principal">Iniciar batalha</button>
+      </form>
+
+      <section id="combate" class="painel" aria-label="Combate" hidden>
+        <div class="duas-colunas lutadores">
+          <article class="lutador heroi">
+            <h2>Herói</h2>
+            <strong class="vida" id="total-heroi"></strong>
+            <progress id="barra-heroi" aria-label="Vida do herói"></progress>
+            <p><span id="dano-heroi"></span> de dano por ataque</p>
+          </article>
+
+          <article class="lutador inimigo">
+            <h2>Inimigo</h2>
+            <strong class="vida" id="total-inimigo"></strong>
+            <progress id="barra-inimigo" aria-label="Vida do inimigo"></progress>
+            <p><span id="dano-inimigo"></span> de dano por ataque</p>
+          </article>
+        </div>
+
+        <p id="mensagem" class="mensagem" role="status"></p>
+        <div class="acoes">
+          <button type="button" id="atacar" class="botao botao-principal">Atacar</button>
+          <button type="button" id="reiniciar" class="botao botao-secundario">Nova batalha</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
