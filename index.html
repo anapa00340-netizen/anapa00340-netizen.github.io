@@ -25,7 +25,7 @@
       <div class="container cabecalho-conteudo">
         <nav aria-label="Navegação principal">
           <ul class="menu">
-            <li><a href="#home">Início</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -38,13 +38,11 @@
       <section id="home" class="inicio" aria-labelledby="titulo-inicio">
         <div class="container inicio-conteudo">
           <div class="inicio-texto">
-            <p class="formacao">Estudante de Ciência da Computação</p>
-            <h1 id="titulo-inicio">Ana Paula <span>Ferreira</span></h1>
-            <p class="introducao">
-              No BonVoy, desenvolvi em Angular os formulários de cadastro e edição de pacotes.
-              A edição carrega os dados pelo ID e avisa se o salvamento falhar. Busco um estágio
-              em desenvolvimento de software.
-            </p>
+            <h1 id="titulo-inicio">
+              <span class="saudacao">Olá, eu sou</span>
+              <span class="nome">Ana Paula <span>Ferreira.</span></span>
+            </h1>
+            <p class="introducao">Desenvolvedora criativa focada em construir experiências digitais e interfaces intuitivas.</p>
           </div>
 
           <div class="retrato">
@@ -61,7 +59,8 @@
 
       <section id="projetos" class="secao projetos" aria-labelledby="titulo-projetos">
         <div class="container">
-          <h2 id="titulo-projetos">Projetos</h2>
+          <h2 id="titulo-projetos">Meus Projetos</h2>
+          <p class="projetos-intro">Aqui estão alguns dos projetos que desenvolvi.</p>
 
           <div class="grade-projetos">
             <article class="projeto">
@@ -104,43 +103,14 @@
                 />
               </div>
               <div class="projeto-conteudo">
-                <h3>Calculadora React</h3>
-                <p>
-                  Calculadora responsiva com as quatro operações básicas, porcentagem e atalhos
-                  de teclado.
-                </p>
+                <p class="projeto-numero">Projeto 3</p>
+                <h3>Calculadora (React)</h3>
                 <ul class="tecnologias" aria-label="Tecnologias da calculadora">
                   <li>React</li>
                   <li>JavaScript</li>
                   <li>CSS</li>
                 </ul>
-                <a class="link-projeto" href="./calculadora/">Abrir calculadora</a>
-              </div>
-            </article>
-
-            <article class="projeto">
-              <div class="capa capa-jogo">
-                <img
-                  src="assets/jogo.png"
-                  alt="Combate com as barras de vida do herói e do inimigo"
-                  width="668"
-                  height="297"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="projeto-conteudo">
-                <h3>Batalha por turnos</h3>
-                <p>
-                  Jogo em Java no qual o herói e o inimigo alternam ataques. Na versão para
-                  navegador, você pode escolher a vida inicial e acompanhar o combate.
-                </p>
-                <ul class="tecnologias" aria-label="Tecnologias da batalha por turnos">
-                  <li>Java</li>
-                  <li>JavaScript</li>
-                  <li>CSS</li>
-                </ul>
-                <a class="link-projeto" href="./jogo/">Jogar no navegador</a>
+                <a class="link-projeto" href="./calculadora/" aria-label="Ver projeto Calculadora (React)">Ver projeto</a>
               </div>
             </article>
 
@@ -156,17 +126,15 @@
                 />
               </div>
               <div class="projeto-conteudo">
+                <p class="projeto-numero">Projeto 1</p>
                 <h3>Site Frutas</h3>
-                <p>
-                  Site do Sacolão Rodrigues com informações sobre frutas, legumes e verduras.
-                </p>
                 <ul class="tecnologias" aria-label="Tecnologias do Site Frutas">
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript</li>
                 </ul>
-                <a class="link-projeto" href="https://anapa00340-netizen.github.io/sitefrutas/">
-                  Abrir Site Frutas
+                <a class="link-projeto" href="https://anapa00340-netizen.github.io/sitefrutas/" aria-label="Ver projeto Site Frutas">
+                  Ver projeto
                 </a>
               </div>
             </article>
@@ -205,11 +173,23 @@
           <div>
             <h2 id="titulo-sobre">Sobre mim</h2>
             <p>
-              Sou estudante de Ciência da Computação e tenho interesse em desenvolvimento web e de
-              software. Uso projetos acadêmicos para praticar o que aprendo na graduação, da
-              construção de interfaces à validação de dados.
+              Sou estudante de Ciência da Computação, atualmente no 4º período, e venho
+              construindo minha trajetória na área de Tecnologia da Informação por meio da
+              graduação e de projetos acadêmicos. Tenho interesse principalmente em
+              desenvolvimento de software e desenvolvimento web, áreas nas quais busco aplicar na
+              prática os conhecimentos que venho adquirindo.
             </p>
-            <p>Além da graduação, também estudo inglês.</p>
+            <p>
+              Sou uma pessoa criativa, curiosa e gosto de aprender coisas novas. Acredito que a
+              prática é uma parte importante do aprendizado e, por isso, procuro transformar o que
+              estudo em projetos e desafios que me permitam desenvolver minhas habilidades.
+            </p>
+            <p>
+              Atualmente, também estudo inglês e continuo buscando ampliar meus conhecimentos na
+              área de tecnologia. Meu objetivo é conquistar uma oportunidade de estágio para
+              colocar meus conhecimentos em prática, adquirir experiência profissional e continuar
+              evoluindo como desenvolvedora.
+            </p>
           </div>
           <div class="sobre-tecnologias">
             <h3>Tecnologias</h3>
@@ -217,8 +197,6 @@
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Angular</li>
               <li>Java</li>
               <li>C</li>
               <li>SQL</li>
@@ -229,7 +207,10 @@
 
       <section id="contato" class="secao contato" aria-labelledby="titulo-contato">
         <div class="container contato-conteudo">
-          <h2 id="titulo-contato">Contato</h2>
+          <div class="contato-texto">
+            <h2 id="titulo-contato">Entre em contato!</h2>
+            <p>Gostou dos meus projetos? Entre em contato comigo!</p>
+          </div>
           <ul class="contato-links">
             <li>
               <a class="botao botao-principal" href="mailto:anapa00340@gmail.com">Enviar e-mail</a>
@@ -241,7 +222,7 @@
               <a
                 class="botao botao-contato"
                 href="https://www.linkedin.com/in/ana-paula-ferreira-47b594375"
-              >LinkedIn</a>
+              >Linkedin</a>
             </li>
           </ul>
         </div>

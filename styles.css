@@ -148,11 +148,13 @@ a {
   padding-block: clamp(3.2rem, 7vw, 6rem);
 }
 
-.formacao {
+.saudacao {
+  display: block;
   margin-bottom: 0.85rem;
   color: #e8d8fa;
-  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
   font-weight: 500;
+  letter-spacing: normal;
 }
 
 h1 {
@@ -163,7 +165,7 @@ h1 {
   letter-spacing: -0.065em;
 }
 
-h1 span {
+.nome > span {
   display: block;
   color: var(--lilas);
 }
@@ -243,6 +245,15 @@ h1 span {
   max-width: 66rem;
 }
 
+.projetos h2 {
+  margin-bottom: 0.55rem;
+}
+
+.projetos-intro {
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+  color: var(--texto-suave);
+}
+
 .grade-projetos {
   --espaco-cards: clamp(1rem, 2.6vw, 1.75rem);
   display: flex;
@@ -253,7 +264,7 @@ h1 span {
 
 .projeto {
   display: flex;
-  flex: 0 1 calc((100% - var(--espaco-cards) - var(--espaco-cards)) / 3);
+  flex: 0 1 calc((100% - 3 * var(--espaco-cards)) / 4);
   min-width: 0;
   flex-direction: column;
   overflow: hidden;
@@ -288,10 +299,6 @@ h1 span {
   background: #eee5f8;
 }
 
-.capa-jogo {
-  background: #ddcdeb;
-}
-
 .capa-frutas {
   background: #e3efdf;
 }
@@ -322,6 +329,11 @@ h1 span {
 
 .projeto p {
   font-size: 0.94rem;
+}
+
+.projeto .projeto-numero {
+  margin-bottom: 0.3rem;
+  font-size: 0.82rem;
 }
 
 .tecnologias {
@@ -398,6 +410,11 @@ h1 span {
 
 .contato h2 {
   margin: 0;
+}
+
+.contato-texto p {
+  margin-top: 0.75rem;
+  color: #ede3f5;
 }
 
 @media (max-width: 66rem) {
