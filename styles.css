@@ -99,21 +99,7 @@ a {
   display: flex;
   min-height: 4.6rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.marca {
-  display: grid;
-  width: 2.6rem;
-  height: 2.6rem;
-  flex: 0 0 auto;
-  place-items: center;
-  border: 1px solid #8f70ad;
-  border-radius: 0.65rem;
-  color: var(--lilas);
-  font-weight: 700;
-  text-decoration: none;
+  justify-content: center;
 }
 
 .menu,
@@ -127,6 +113,7 @@ a {
 .menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.2rem clamp(0.9rem, 3vw, 2.15rem);
 }
 
@@ -229,26 +216,14 @@ h1 span {
 }
 
 .retrato {
-  position: relative;
-  isolation: isolate;
-  width: min(100% - 1rem, 20.5rem);
+  width: min(100%, 20.5rem);
   justify-self: center;
-}
-
-.retrato::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0.8rem -0.8rem -0.8rem 0.8rem;
-  border: 1px solid #ba98e1;
-  border-radius: 1.25rem;
-  content: '';
 }
 
 .retrato img {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 5;
-  border: 1px solid #ad90ca;
   border-radius: 1.25rem;
   background: #432851;
   object-fit: cover;
@@ -257,6 +232,15 @@ h1 span {
 
 .secao {
   padding-block: clamp(3.25rem, 7vw, 5.75rem);
+}
+
+.sobre,
+.contato {
+  padding-block: clamp(4.75rem, 10vw, 8.5rem);
+}
+
+.projetos .container {
+  max-width: 66rem;
 }
 
 .grade-projetos {
@@ -276,10 +260,10 @@ h1 span {
 
 .capa {
   display: grid;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
   overflow: hidden;
   place-items: center;
-  padding: clamp(0.75rem, 2vw, 1.25rem);
+  padding: clamp(0.65rem, 1.7vw, 1rem);
 }
 
 .capa img {
@@ -329,7 +313,7 @@ h1 span {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: clamp(1.1rem, 2.2vw, 1.5rem);
+  padding: clamp(1rem, 2vw, 1.25rem);
 }
 
 .projeto h3,
@@ -448,15 +432,10 @@ h1 span {
   .retrato {
     width: min(90%, 17rem);
     justify-self: start;
-    margin-bottom: 0.7rem;
   }
 }
 
 @media (max-width: 35rem) {
-  .cabecalho-conteudo {
-    gap: 0.6rem;
-  }
-
   .menu {
     gap: 0.1rem clamp(0.55rem, 2.2vw, 0.9rem);
   }
