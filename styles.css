@@ -245,7 +245,7 @@ h1 span {
 
 .grade-projetos {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1rem, 2.6vw, 1.75rem);
 }
 
@@ -278,6 +278,10 @@ h1 span {
 
 .capa-bonvoy {
   background: #dce8fb;
+}
+
+.capa-calculadora {
+  background: #eee5f8;
 }
 
 .capa-frutas {
@@ -409,13 +413,15 @@ h1 span {
   margin: 0;
 }
 
+@media (max-width: 66rem) {
+  .grade-projetos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 56rem) {
   .inicio-conteudo {
     gap: 2rem;
-  }
-
-  .grade-projetos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
